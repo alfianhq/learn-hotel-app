@@ -10,9 +10,13 @@ import Error from './Pages/Error';
 // Router
 import {Switch, Route} from 'react-router-dom';
 
+// Component
+import Navbar from './Components/Navbar';
+
 function App() {
 	return (
 		<>
+			<Navbar />
 			<Switch>
 				<Route exact path='/' component={Home} />
 				<Route exact path='/rooms' component={Rooms} />
