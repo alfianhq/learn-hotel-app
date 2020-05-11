@@ -7,13 +7,15 @@ import Rooms from './Pages/Rooms';
 import SingleRoom from './Pages/singleRoom';
 import Error from './Pages/Error';
 
+// Router
+import {Switch, Route} from 'react-router-dom';
+
 function App() {
 	return (
 		<>
-			<Home />
-			<Rooms />
-			<SingleRoom />
-			<Error />
+			<Route exact path='/' component={Home} />
+			<Route exact path='/rooms' component={Rooms} />
+			<Route exact path='/rooms/:slug' component={SingleRoom} />
 		</>
 	);
 }
