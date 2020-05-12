@@ -1,11 +1,22 @@
-import React, {Component} from 'react';
+import React from 'react';
+import Room from './Room';
 
-export default class RoomsList extends Component {
-	render() {
+export default function RoomsList({rooms}) {
+	if (rooms.length === 0) {
 		return (
-			<div>
-				<h1>Hello From Room List</h1>
+			<div className='empty-search'>
+				<h3>Unfotunately no rooms matched your search parameters</h3>
 			</div>
 		);
 	}
+
+	return (
+		<section className='roomslist'>
+			<div className='roomslist-center'>
+				{rooms.map(item => {
+					return <Room key={item.id} room={item} />;
+				})}
+			</div>
+		</section>
+	);
 }
