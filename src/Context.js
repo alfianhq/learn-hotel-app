@@ -10,7 +10,7 @@ class RoomProvider extends Component {
 		sortedRooms: [],
 		featuredRooms: [],
 		loading: true,
-		type: 'all',
+		type: 'single',
 		capacity: 1,
 		price: 0,
 		minPrice: 0,
@@ -59,7 +59,9 @@ class RoomProvider extends Component {
 		const type = event.target.type;
 		const name = event.target.name;
 		const value = event.target.value;
-		console.log(type, name, value);
+		console.log(
+			`this is type: ${type}, this is name: ${name}, this is value : ${value}`
+		);
 	};
 	filterRooms = () => {
 		console.log('Hello');
