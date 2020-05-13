@@ -122,6 +122,32 @@ export default function RoomsFilter({rooms}) {
 					</div>
 				</div>
 				{/* End Of Size */}
+
+				{/*  Extras */}
+				<div className='form-group'>
+					<div className='single-extra'>
+						<input
+							type='checkbox'
+							name='breakfast'
+							id='breakfast'
+							checked={breakfast}
+							onChange={handleChange}
+						/>
+						<label htmlFor='breakfast'>breakfast</label>
+					</div>
+					{/* petes */}
+					<div className='single-extra'>
+						<input
+							type='checkbox'
+							name='pets'
+							id='pets'
+							checked={pets}
+							onChange={handleChange}
+						/>
+						<label htmlFor='pets'>Pets</label>
+					</div>
+				</div>
+				{/* End Extras */}
 			</form>
 		</section>
 	);
