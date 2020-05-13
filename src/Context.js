@@ -107,6 +107,11 @@ class RoomProvider extends Component {
 			room => room.size >= minSize && room.size <= maxSize
 		);
 
+		// Filter by breakfas
+		if (breakfast) {
+			tempRooms = tempRooms.filter(room => room.breakfast === true);
+		}
+
 		// change state
 		this.setState({
 			sortedRooms: tempRooms,
