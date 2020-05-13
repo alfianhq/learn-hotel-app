@@ -112,6 +112,11 @@ class RoomProvider extends Component {
 			tempRooms = tempRooms.filter(room => room.breakfast === true);
 		}
 
+		// Filter by breakfas
+		if (pets) {
+			tempRooms = tempRooms.filter(room => room.pets === true);
+		}
+
 		// change state
 		this.setState({
 			sortedRooms: tempRooms,
